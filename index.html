@@ -10,6 +10,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Promotional Pop-up Form -->
+  <div class="promo-popup-overlay" id="promoPopup">
+    <div class="promo-popup">
+      <button class="promo-popup-close" id="closePromoPopup">×</button>
+      <div class="promo-popup-content">
+        <div class="promo-popup-header">
+          <div class="promo-badge">
+            <span class="promo-badge-text">30% OFF</span>
+          </div>
+          <h2 class="promo-popup-title">Limited Time Offer!</h2>
+          <p class="promo-popup-subtitle">Get 30% off on all our book marketing services</p>
+        </div>
+        <div class="promo-popup-body">
+          <p class="promo-popup-desc">Transform your book's success with our expert marketing strategies. Don't miss this exclusive offer!</p>
+          <form class="promo-popup-form" id="promoForm">
+            <div class="form-group">
+              <input type="text" id="promoName" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="promoEmail" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <select id="promoService" name="service" required>
+                <option value="">Select Service</option>
+                <option value="book-marketing">Book Marketing</option>
+                <option value="ghost-writing">Ghost Writing</option>
+                <option value="manuscript-writing">Manuscript Writing</option>
+                <option value="book-publication">Book Publication</option>
+                <option value="book-design">Book Design</option>
+              </select>
+            </div>
+            <button type="submit" class="promo-submit-btn">
+              <span>Claim 30% Discount</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14m0 0l-7-7m7 7l-7 7"/>
+              </svg>
+            </button>
+          </form>
+          <div class="promo-popup-footer">
+            <p class="promo-terms">*Limited time offer. Valid until <span id="promoEndDate"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navbar/Header -->
   <header class="navbar sticky top-0 z-50">
     <div class="navbar-left">
@@ -30,7 +76,7 @@
     </div>
     <div class="navbar-right">
       
-      <button class="cta-btn">LET'S BUILD TOGETHER</button>
+      <button class="cta-btn" href="#promoPopup">Get Started</button>
       
     </div>
   </header>
@@ -62,7 +108,7 @@
 <!--           
         <button class="service-card-rect-arrow">
             <svg width="32" height="32" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="6" fill="none" stroke="#d6ff4b" stroke-width="2"/>
+            <circle cx="12" cy="12" r="6" fill="none" stroke="#C9F31D" stroke-width="2"/>
             <path d="M9 12h6m0 0l-2-2m2 2l-2 2" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button> -->
@@ -114,14 +160,14 @@
     <div class="creativity-content">
       <div class="creativity-label">
         <span class="creativity-icon">
-          <svg width="18" height="18" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#d6ff4b"/></svg>
+          <svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#C9F31D"/></svg>
         </span>
         <span class="creativity-label-text">ABOUT US</span>
       </div>
-      <h3 class="creativity-title">
-        Team of experienced <br>
-        book marketers and writers
-      </h3>
+      <h2 class="creativity-title scroll-reveal-heading">
+        Team Of Experienced <br>
+        Book Marketers <br> And Writers
+      </h2>
       <p class="creativity-desc">
         Our team of designers, developers, and strategists are passionate about bringing your brand's vision to life through innovative user.
       </p>
@@ -141,7 +187,7 @@
           <div class="creativity-progress-fill" style="width:98%"></div>
         </div>
       </div>
-      <button class="creativity-btn">SCHEDULE A CONSULTATION</button>
+      <button class="creativity-btn" href="#promoPopup">SCHEDULE A CONSULTATION</button>
     
     </div>
   </section>
@@ -172,10 +218,12 @@
     <div class="modern-services-header">
      
       <div class="modern-services-label">
-       
-        <span>OUR SERVICES</span>
+        <span class="creativity-icon">
+          <svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#C9F31D"/></svg>
+          OUR SERVICES
+        </span>
       </div>
-      <h2 class="modern-services-title">
+      <h2 class="modern-services-title scroll-reveal-heading">
         Dominate Your Book <br> With Our Services
       </h2>
     </div>
@@ -193,7 +241,7 @@
         </div>
         <button class="service-card-rect-arrow">
           <svg width="28" height="28" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="11" fill="none" stroke="#d6ff4b" stroke-width="2"/>
+            <circle cx="12" cy="12" r="11" fill="none" stroke="#C9F31D" stroke-width="2"/>
             <path d="M8 12h8m0 0l-3-3m3 3l-3 3" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -215,7 +263,7 @@
         </div>
         <button class="service-card-rect-arrow">
           <svg width="28" height="28" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="11" fill="none" stroke="#d6ff4b" stroke-width="2"/>
+            <circle cx="12" cy="12" r="11" fill="none" stroke="#C9F31D" stroke-width="2"/>
             <path d="M8 12h8m0 0l-3-3m3 3l-3 3" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -237,7 +285,7 @@
         </div>
         <button class="service-card-rect-arrow">
           <svg width="28" height="28" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="11" fill="none" stroke="#d6ff4b" stroke-width="2"/>
+            <circle cx="12" cy="12" r="11" fill="none" stroke="#C9F31D" stroke-width="2"/>
             <path d="M8 12h8m0 0l-3-3m3 3l-3 3" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -266,7 +314,7 @@
         <div class="cta-banner-subtext">
           Join <span class="cta-highlight-green">1580+</span> satisfied clients and start your transformation today!
         </div>
-        <button class="cta-banner-btn">Start Now</button>
+        <button class="cta-banner-btn" href="#promoPopup">Start Now</button>
         <!-- Add a sample form for GSAP form animation -->
        
       </div>
@@ -286,8 +334,14 @@
 <!-- Featured SECTION -->
 <section class="featured-works-section reveal-section">
   <div class="featured-works-header">
+    <div class="modern-services-label">
+      <span class="creativity-icon">
+        <svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#C9F31D"/></svg>
+        OUR GALLERY
+      </span>
+    </div>
     
-    <h2 class="featured-works-title hero-text mb-4">Featured Works</h2>
+    <h2 class="featured-works-title hero-text mb-4 scroll-reveal-heading">Featured Works</h2>
     <div class="featured-works-tabs">
       <button class="tab-btn active" data-tab="all">All</button>
       <button class="tab-btn" data-tab="fiction">Fiction</button>
@@ -347,9 +401,9 @@
 <!-- WHY CHOOSE US -->
 
   <!-- WHY CHOOSE US SECTION -->
-  <section class="why-choose-us-custom-section max-w-7xl mx-auto px-4 py-16 reveal-section">
+  <section class="why-choose-us-custom-section max-w-7xl mx-auto px-4 py-16 reveal-section ">
     <div class="text-center mb-12">
-      <h2 class="why-choose-heading text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">Why Choose Us</h2>
+      <h2 class="why-choose-heading text-4xl md:text-5xl font-extrabold mb-5 tracking-tight scroll-reveal-heading">Why Choose Us</h2>
       <p class="why-choose-subheading text-lg md:text-xl text-gray-300 mb-16 max-w-2xl mx-auto">
         Discover what sets us apart and why so many authors trust us to bring their stories to life with creativity, expertise, and unwavering support.
       </p>
@@ -387,59 +441,203 @@
   </section>
   <!-- END WHY CHOOSE US SECTION -->
 
-  
-  
-
- 
-
-  <!-- Footer Section -->
-<footer class="footer-section bg-[#191a1b] text-white pt-16 pb-6 mt-16 reveal-section">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 border-b border-gray-700 pb-10">
-    <!-- Logo & Description -->
-    <div class="flex flex-col items-start">
-      <div class="flex items-center mb-4 gap-3">
-        <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-lime-400 mr-2">
-          <svg width="28" height="28" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3" stroke="#232323" stroke-width="2" stroke-linecap="round"/></svg>
+  <!-- TESTIMONIALS CAROUSEL SECTION -->
+  <section class="testimonials-carousel-section">
+    <div class="testimonials-header">
+      <div class="modern-services-label">
+        <span class="creativity-icon">
+          <svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#C9F31D"/></svg>
+           TESTIMONIALS
         </span>
-        <span class="text-2xl font-extrabold text-lime-400 tracking-wide">LOGO</span>
       </div>
-      <div class="text-gray-300 mb-4 text-base">Connecting businesses with their audiences and individuals with their dreams.</div>
-      <div class="flex gap-3 mb-4">
-        <a href="#" class="footer-social-icon" aria-label="Facebook"><svg width="20" height="20" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 8h-2a1 1 0 0 0-1 1v2h3l-.5 2H12v6h-2v-6H8v-2h2V9a3 3 0 0 1 3-3h2v2z"/></svg></a>
-        <a href="#" class="footer-social-icon" aria-label="X"><svg width="20" height="20" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 8l8 8M16 8l-8 8"/></svg></a>
-        <a href="#" class="footer-social-icon" aria-label="Instagram"><svg width="20" height="20" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><rect x="8" y="8" width="8" height="8" rx="2"/><circle cx="16.5" cy="7.5" r="1.5"/></svg></a>
-        <a href="#" class="footer-social-icon" aria-label="Pinterest"><svg width="20" height="20" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></a>
+      <h2 class="testimonials-title">Craft unique identities that<br>stand out</h2>
+    </div>
+    <div class="testimonials-carousel-outer">
+      <div class="testimonials-carousel">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Financial planners help people to gain knowledge about to invest and save their money in the most efficient way ever. Many people all across the Financial know.”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-photo" alt="Courtney Henry">
+              <div>
+                <div class="testimonial-name">Courtney Henry</div>
+                <div class="testimonial-role">Nursing Assistant</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card active">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Absolutely amazing service! My book launch was a huge success thanks to this team.”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" class="testimonial-photo" alt="Sarah Johnson">
+              <div>
+                <div class="testimonial-name">Sarah Johnson</div>
+                <div class="testimonial-role">Author, Fiction</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Professional, creative, and always supportive. Highly recommended for any author!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/43.jpg" class="testimonial-photo" alt="Michael Lee">
+              <div>
+                <div class="testimonial-name">Michael Lee</div>
+                <div class="testimonial-role">Non-Fiction Writer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“They made the publishing process so easy and stress-free. I'll be back for my next book!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg" class="testimonial-photo" alt="Emily Carter">
+              <div>
+                <div class="testimonial-name">Emily Carter</div>
+                <div class="testimonial-role">Memoir Author</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card active">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Their marketing strategies are top-notch. My book sales skyrocketed!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/77.jpg" class="testimonial-photo" alt="David Kim">
+              <div>
+                <div class="testimonial-name">David Kim</div>
+                <div class="testimonial-role">Business Author</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“A seamless experience from start to finish. The team exceeded my expectations!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/12.jpg" class="testimonial-photo" alt="Alex Morgan">
+              <div>
+                <div class="testimonial-name">Alex Morgan</div>
+                <div class="testimonial-role">Editor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“I felt supported every step of the way. Highly recommend their services!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" class="testimonial-photo" alt="Jessica Brown">
+              <div>
+                <div class="testimonial-name">Jessica Brown</div>
+                <div class="testimonial-role">Poet</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card active">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Their creative approach made my book stand out. Thank you!”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/55.jpg" class="testimonial-photo" alt="Chris Evans">
+              <div>
+                <div class="testimonial-name">Chris Evans</div>
+                <div class="testimonial-role">Children's Author</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="rating-stars"><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon filled">★</span><span class="star-icon">★</span></div>
+            <p class="testimonial-text">“Financial planners help people to gain knowledge about to invest and save their money in the most efficient way ever. Many people all across the Financial know.”</p>
+            <div class="testimonial-meta">
+              <img src="https://randomuser.me/api/portraits/men/1.jpg" class="testimonial-photo" alt="Guy Hawkins">
+              <div>
+                <div class="testimonial-name">Guy Hawkins</div>
+                <div class="testimonial-role">Medical Assistant</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Quick Links -->
-    <div class="flex flex-col items-start">
-      <h3 class="text-lg font-bold mb-4 tracking-wide">Quick Links</h3>
-      <ul class="space-y-2 text-gray-300">
-        <li><a href="#" class="hover:text-lime-400 transition">About Us</a></li>
-        <li><a href="#" class="hover:text-lime-400 transition">Service</a></li>
-        <li><a href="#" class="hover:text-lime-400 transition">Contact Us</a></li>
-        <li><a href="#" class="hover:text-lime-400 transition">Blog Post</a></li>
-        <li><a href="#" class="hover:text-lime-400 transition">Pricing</a></li>
+    <div class="testimonials-carousel-controls">
+      <button class="carousel-btn testimonials-prev" aria-label="Previous testimonial">&#8592;</button>
+      <button class="carousel-btn testimonials-next" aria-label="Next testimonial">&#8594;</button>
+    </div>
+  </section>
+  <!-- END TESTIMONIALS CAROUSEL SECTION -->
+
+   <!-- banner section -->
+   <section class="banner-section custom-banner-green">
+    <div class="banner-inner">
+      <div class="banner-left">
+        <div class="banner-image-bg">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkMkkCpWmvMtDM5HJ_hBIhdYXgRW8nR2wXtaU1uWmY-_l0XPC0QbvWDiHQF3q0XEBJJBM&usqp=CAU" class="banner-main-img" />
+        </div>
+      </div>
+      <div class="banner-right">
+        <h3 class="banner-title">
+           Your Book's Success with <br />
+          <span class="green-accent">Our Expert Book Marketing!</span>
+        </h3>
+        <p class="banner-desc">
+          Your story deserves the spotlight! We provide strategic marketing solutions, from targeted promotions to reader engagement strategies, ensuring your book reaches the right audience.
+        </p>
+        <a href="#" class="banner-btn" href="#promoPopup">Live Chat <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+  <!-- Banner section end -->
+  <!-- Footer Section -->
+<footer class="footer-modern">
+  <div class="footer-modern-inner">
+    <!-- Column 1: Logo & Description -->
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">
+        <span class="footer-logo-icon">
+          <svg width="38" height="38" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#C9F31D" stroke-width="4"/><circle cx="20" cy="20" r="10" fill="#C9F31D"/></svg>
+        </span>
+        <span class="footer-logo-text">LOGO</span>
+      </div>
+      <div class="footer-desc">Empowering authors and brands to shine. Your story, our strategy.</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="Facebook"><svg width="20" height="20" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 8h-2a1 1 0 0 0-1 1v2h3l-.5 2H12v6h-2v-6H8v-2h2V9a3 3 0 0 1 3-3h2v2z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="X"><svg width="20" height="20" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 8l8 8M16 8l-8 8"/></svg></a>
+        <a href="#" class="footer-social" aria-label="Instagram"><svg width="20" height="20" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><rect x="8" y="8" width="8" height="8" rx="2"/><circle cx="16.5" cy="7.5" r="1.5"/></svg></a>
+        <a href="#" class="footer-social" aria-label="Pinterest"><svg width="20" height="20" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></a>
+      </div>
+    </div>
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pricing</a></li>
       </ul>
     </div>
-    <!-- Contact -->
-    <div class="flex flex-col items-start">
-      <h3 class="text-lg font-bold mb-4 tracking-wide">Contact</h3>
-      <ul class="space-y-4 text-gray-300">
-        <li class="flex items-center gap-3"><span class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-500"><svg width="18" height="18" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.73 3.05a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l2.03-2.03a2 2 0 0 1 2.11-.45c.98.36 2 .6 3.05.73A2 2 0 0 1 22 16.92z"/></svg></span><span>017345 678 9101</span></li>
-        <li class="flex items-center gap-3"><span class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-500"><svg width="18" height="18" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 12.414a8 8 0 1 0-1.414 1.414l4.243 4.243a1 1 0 0 0 1.414-1.414z"/></svg></span><span>Karachi, Pakistan</span></li>
-        <li class="flex items-center gap-3"><span class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-500"><svg width="18" height="18" fill="none" stroke="#d6ff4b" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span><span>abcd@gmail.com</span></li>
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col footer-contact">
+      <h3>Contact</h3>
+      <ul>
+        <li><span class="footer-contact-icon"><svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.73 3.05a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l2.03-2.03a2 2 0 0 1 2.11-.45c.98.36 2 .6 3.05.73A2 2 0 0 1 22 16.92z"/></svg></span> <span>017345 678 9101</span></li>
+        <li><span class="footer-contact-icon"><svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 12.414a8 8 0 1 0-1.414 1.414l4.243 4.243a1 1 0 0 0 1.414-1.414z"/></svg></span> <span>Karachi, Pakistan</span></li>
+        <li><span class="footer-contact-icon"><svg width="18" height="18" fill="none" stroke="#C9F31D" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span> <span>abcd@gmail.com</span></li>
       </ul>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center pt-8 mt-8 border-t border-gray-700 text-gray-400 text-sm gap-2">
-    <div class="text-center md:text-left w-full md:w-auto mb-2 md:mb-0">
-      <span class="font-bold text-white">© LOGO 2025</span> | All Rights Reserved
-    </div>
-    <div class="flex gap-4 justify-center md:justify-end w-full md:w-auto">
-      <a href="#" class="hover:text-lime-400 transition">Terms & Condition</a>
-      <a href="#" class="hover:text-lime-400 transition">Privacy Policy</a>
-      <a href="#" class="hover:text-lime-400 transition">Contact Us</a>
+  <div class="footer-copyright-bar">
+    <div class="footer-copyright-text">© LOGO 2025 | All Rights Reserved</div>
+    <div class="footer-copyright-links">
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact Us</a>
     </div>
   </div>
 </footer>
@@ -448,7 +646,9 @@
  <script src="script.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+ <script src="https://unpkg.com/split-type"></script>
  <script src="gsap.js"></script>
+
  <script>
   document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -499,6 +699,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </svg>
   </div>
 </div>
+
 
 
 </body>

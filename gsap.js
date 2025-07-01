@@ -23,6 +23,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = gsap.utils.toArray(".service-card-rect");
 
+gsap.registerPlugin(ScrollTrigger);
+
+// Select all headings to animate
+const headings = document.querySelectorAll('.scroll-reveal-heading');
+
+headings.forEach((heading) => {
+  // Split heading into chars
+  const split = new SplitType(heading, { types: 'chars', tagName: 'span' });
+  
+  // Set initial faded style
+  gsap.set(split.chars, {
+    color: "#777",
+    opacity: 0.2,
+    filter: "blur(3px)"
+  });
+  
+  // Build ScrollTrigger animation
+  gsap.to(split.chars, {
+    color: "#ffff",
+    opacity: 1,
+    filter: "blur(0px)",
+    y: 0,
+    ease: "power3.out",
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 80%",
+      end: "bottom 50%",
+      scrub: true
+    }
+  });
+  
+});
 
 // Card hover animation
 document.querySelectorAll(".card").forEach((card) => {
@@ -41,7 +74,7 @@ cards.forEach((card, index) => {
     { 
       autoAlpha: 1, y: 0, scale: 1, duration: 0.6, 
       ease: "power2.out", 
-      scrollTrigger: {
+  scrollTrigger: {
         trigger: card,
         start: "top center+=100",
         end: "bottom center",
