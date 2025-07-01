@@ -3062,7 +3062,7 @@
 }
 
 .custom-banner-green {
-  background: #c8f31da6; /* deep teal/blue, adjust as needed */
+  background: linear-gradient(135deg, #d6ff4b 0%, #C9F31D 100%); /* deep teal/blue, adjust as needed */
   padding: 0;
   min-height: 420px;
   display: flex;
@@ -3669,5 +3669,96 @@
   .promo-badge {
     font-size: 1rem;
     padding: 6px 16px;
+  }
+}
+
+/* === Navbar Mobile Enhancements === */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30,32,34,0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 2000;
+    transition: left 0.3s;
+  }
+  .nav-links.mobile-active {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #C9F31D;
+    font-size: 2rem;
+    margin-left: 10px;
+    cursor: pointer;
+    z-index: 2100;
+  }
+}
+@media (min-width: 901px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Make CTA button touch-friendly */
+@media (max-width: 900px) {
+  .cta-btn {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* === Hero Section Mobile Enhancements === */
+@media (max-width: 700px) {
+  .hero-section {
+    padding: 0 6vw;
+    min-height: 340px;
+  }
+  .hero-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  .hero-avatars-row {
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 6px 6px 6px 6px;
+  }
+  .hero-visual {
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .hero-sphere {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-sphere img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0 2vw;
+  }
+  .hero-title {
+    font-size: 1.1rem;
   }
 }

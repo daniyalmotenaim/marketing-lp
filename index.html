@@ -75,9 +75,8 @@
       </nav>
     </div>
     <div class="navbar-right">
-      
       <button class="cta-btn" href="#promoPopup">Get Started</button>
-      
+      <button class="menu-btn" aria-label="Open menu">&#9776;</button>
     </div>
   </header>
 
@@ -88,7 +87,7 @@
         <!-- <span class="hero-icon">
           <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#fff"/></svg>
         </span> -->
-        <span class="hero-label-text hero-text">DESIGNING THE FUTURE OF YOUR Book</span>
+        <span class="hero-label-text hero-text">DESIGNING THE FUTURE OF YOUR BOOK</span>
       </div>
       <h3 class="hero-title hero-text">
         Proffesional Book <span class="hero-flower">
@@ -104,15 +103,7 @@
         <span class="hero-avatars-count">
           Contact Now
          </span>
-         <div class="avatar-arrow">
-<!--           
-        <button class="service-card-rect-arrow">
-            <svg width="32" height="32" fill="none" stroke="#232323" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="6" fill="none" stroke="#C9F31D" stroke-width="2"/>
-            <path d="M9 12h6m0 0l-2-2m2 2l-2 2" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button> -->
-        </div>
+       
         </div>  
         </div>
     <div class="hero-visual">
@@ -681,6 +672,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Mobile Navbar Toggle
+(function() {
+  const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('mobile-active');
+    });
+    // Close menu on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('mobile-active');
+      });
+    });
+  }
+})();
 </script>
 
 <!-- ================= Scroll to top Start ================= -->
